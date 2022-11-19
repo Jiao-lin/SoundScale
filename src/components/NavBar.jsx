@@ -9,7 +9,7 @@ export const NavBar = () => {
 
     <header className='w-full h-14 bg-zinc-900 grid grid-cols-12 grid-rows-1 justify-items-start	items-center '>
         <div className={NavBarBotonesCss+" ml-3"}>{iconos.logo}</div>
-        <div className={"rounded-lg col-span-5 w-11/12  h-10 flex flex-row bg-zinc-800 justify-end"}>
+        <div className={"rounded-lg col-span-5 w-11/12 h-10 flex flex-row bg-zinc-800 justify-end"}>
           <input placeholder='Buscar...' className={"w-full rounded-l-lg h-full text-neutral-50 p-2 bg-zinc-800 focus:outline-none focus:border-y-2 focus:border-l-2 focus:border-violet-500"}></input>
           <button className={'w-1/5 h-10 rounded-r-lg bg-violet-500 flex flex-row items-center justify-center'}>{iconos.buscar}</button>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import iconos from '../iconos'
+import iconos from '../../iconos'
 
 const CartWidget = () => {
   return (

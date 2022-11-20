@@ -17,7 +17,7 @@ export const NavBar = () => {
         <button className={NavBarBotonesCss+" hover:text-violet-500 hover:shadow-violet-500 active:text-violet-500"}>{NavBarNames.boton1}{iconos.flecha}</button>
         <button className={NavBarBotonesCss+" hover:text-violet-500 hover:shadow-violet-500 active:text-violet-500"}>{NavBarNames.boton2}{iconos.flecha}</button>
         <button className={NavBarBotonesCss+" hover:text-pink-500 hover:shadow-pink-500 active:text-pink-500"}>{NavBarNames.boton3}{iconos.corazon}</button>
-        <CartWidget/>
+        <CartWidget num={0}/>
         </nav>  
         
     </header>

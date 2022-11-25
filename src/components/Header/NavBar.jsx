@@ -8,7 +8,7 @@ export const NavBar = () => {
     <header>
       <nav className='w-full h-14 bg-zinc-900 grid grid-rows-1 justify-items-start items-center lg:grid-cols-12 grid-cols-9'>
         <div className={NavBarResponsive.Sm+" "+NavBarResponsive.Xl+" "}>{iconos.logo}</div>
-        <div className={"flex flex-row h-10 w-full rounded-lg col-span-6 bg-zinc-800 justify-end lg:col-span-5 lg:w-11/12 "}>
+        <div className={"flex flex-row h-10 w-full ml-[1%] rounded-lg col-span-6 bg-zinc-800 justify-end lg:col-span-5 lg:w-11/12 "}>
           <input placeholder=' Buscar...' className={"w-full rounded-l-lg h-full text-neutral-50 p-2 bg-zinc-800 focus:outline-none focus:border-y-2 focus:border-l-2 focus:border-violet-500 caret-violet-500"}></input>
           <button className={'w-1/5 h-10 rounded-r-lg bg-violet-500 flex flex-row items-center justify-center'}>{iconos.buscar}</button>
         </div>

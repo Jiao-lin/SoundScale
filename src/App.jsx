@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { NavBar } from './pages/home/Header/NavBar';
-import ItemListContainer from './pages/home/ItemListContainer/ItemListContainer';
+//!import ItemListContainer from './pages/home/ItemListContainer/ItemListContainer';
 import MainContainer from './pages/home/Main/MainContainer';
 
 function App() {

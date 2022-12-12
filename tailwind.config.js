@@ -5,6 +5,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
     extend: {textShadow: {
+      none:'0 0px 0px var(--tw-shadow-color)',
       sm: '0 1px 2px var(--tw-shadow-color)',
       DEFAULT: '-2px 1px 12px var(--tw-shadow-color)',
       lg: '0 8px 16px var(--tw-shadow-color)',

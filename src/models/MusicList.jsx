@@ -13,14 +13,12 @@ const MusicList = ({count,setcount}) => {
         const URL = ('https://rickandmortyapi.com/api/character');
         const response = await fetch(URL);
         const data = await response.json();
-        console.log(data.results);
         setMusica(data.results);
         
     }
-
     return (
-        <div className='grid grid-cols-2 gap-3'>
-            {musica.map( p=> <MusicCard count={count} setcount={setcount} key={p.id}{...p}/>)}
+        <div className='grid grid-cols-1 gap-3 justify-items-center'>
+            {musica.map( p=> <MusicCard count={count} setcount={setcount} id={p.id} key={p.id}{...p}/>)}
         </div>
     );
 }

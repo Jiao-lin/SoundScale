@@ -7,8 +7,6 @@ import { Rkt } from './pages/home/Header/Generos/Rkt';
 import { ItemDetailContainer} from './components/ItemDetailContainer';
 import Checkout from './pages/auth/Checkout';
 
-
-
 function App() {
   return (
     <> 

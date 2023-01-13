@@ -4,6 +4,7 @@ import iconos from "../iconos";
 import {deleteDoc, doc, getFirestore, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 
 const MusicCard = ({artists,id,img,title,carrito,deseado,song,precio,estilo})=>{
+   
     const db = getFirestore();
     const [ButtonToggle, SetButtonToggle]=useState(carrito);
     const [FavouritesButton, SetFavoutitesButton]=useState(!deseado);

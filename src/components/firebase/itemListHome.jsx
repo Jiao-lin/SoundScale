@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {collection, getDocs, getFirestore, orderBy, query} from 'firebase/firestore'
-import MusicCard from '../musicCard copy';
+import MusicCard from '../ItemList';
 const ItemListFire= ()=> {
   
   const [Item, setItem] = useState([]);

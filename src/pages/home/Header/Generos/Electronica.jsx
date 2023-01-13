@@ -1,6 +1,6 @@
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
-import MusicCard from '../../../../components/musicCard copy';
+import MusicCard from '../../../../components/ItemList';
 
 export const Electronica = () => {
     

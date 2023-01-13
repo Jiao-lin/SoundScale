@@ -1,21 +1,20 @@
-import React, { useContext, useEffect, useState }  from 'react'
+import React, { useEffect, useState }  from 'react'
 import iconos from '../../../iconos'
 import NavBarBotonesResponsive from './NavBarResponsive'
-import { CartContextCount } from '../../../context/CartContextCount'
 import CartList from '../../../components/containers/CartList'
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 
 const CartWidget = () => {
-  let count = useContext(CartContextCount); 
-  if(count>99){
-    count='9+';
-  }else{}
 
   const [Item, setItem] = useState([]);
 
   useEffect(()=>{
     getItemData()
   },[Item])
+
+  if(Item.length > 99){
+    setItem('9+');
+  }else{}
 
   const getItemData=async()=>{
     const db = getFirestore();

@@ -1,13 +1,13 @@
 import React from 'react'
-import MusicList from '../../../models/MusicList'
+import ItemListFire from '../../../components/firebase/itemListHome'
 
-function MainContainer({count,setcount}) {
+
+function MainContainer() {
   return (
     <main className='h-auto bg-neutral-900'>
-      
-      <h1 className='text-white text-3xl p-4 subpixel-antialiased'>TOP 20 MAS DESEADOS</h1>
-      <MusicList count={count} setcount={setcount}/>
      
+      <h1 className='text-white text-3xl p-4 subpixel-antialiased'>TOP 20 MAS DESEADOS</h1>
+      <ItemListFire/>
     </main>
   )
 }

@@ -3,11 +3,31 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from "firebase/app";
+
+/*const firebaseConfig = {
+  apiKey: "AIzaSyAqFtos0a86NSd5i_OUQuBoD4xQvMypT4A",
+  authDomain: "react-58861.firebaseapp.com",
+  projectId: "react-58861",
+  storageBucket: "react-58861.appspot.com",
+  messagingSenderId: "423442116689",
+  appId: "1:423442116689:web:5c809bdd7f213247ac8870"
+};*/
+const firebaseConfig = {
+  apiKey: "AIzaSyCDyDriEpRhdIbENYb0dpyGb-FXIS_ze-k",
+  authDomain: "react-facu.firebaseapp.com",
+  projectId: "react-facu",
+  storageBucket: "react-facu.appspot.com",
+  messagingSenderId: "319775776367",
+  appId: "1:319775776367:web:7a73bb32823750c7a9f79a"
+};
+
+const app = initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>
 );
 

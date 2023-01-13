@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import {ItemDetailContainer} from './components/ItemDetailContainer';
 import { NavBar } from './pages/home/Header/NavBar';
-import ItemListContainer from './pages/home/Main/ItemListContainer';
 import MainContainerHome from './pages/home/Main/MainContainerHome';
+import ItemListFire from './components/firebase/itemListHome';
+import { Electronica } from './pages/home/Header/Generos/Electronica';
+import { Rkt } from './pages/home/Header/Generos/Rkt';
+import { ItemDetailContainer as ItemDetailContainerBeta } from './components/ItemDetailContainer copy';
+import Checkout from './pages/auth/Checkout';
+
+
 
 function App() {
   const[count,setcount] = useState(0);
@@ -12,13 +17,14 @@ function App() {
     <> 
     <BrowserRouter>
     <div className="App">
-      <NavBar count={count}/>
+      <NavBar/>
       <Routes>
-      <Route path='/' element={<MainContainerHome count={count} setcount={setcount}/>}/>
-      <Route path='/Category/Electronica' element={<ItemListContainer count={count} setcount={setcount}/>}/>
-      <Route path={`/item/:id`} element={<ItemDetailContainer count={count} setcount={setcount}/>}/>
+      <Route path='/' element={<MainContainerHome/>}/>
+      <Route path='/Generos/Electronica' element={<Electronica/>}/>
+      <Route path='/Generos/Rkt' element={<Rkt/>}/>
+      <Route path={`/:estilo/:id`} element={<ItemDetailContainerBeta/>}/>
+      <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
-    
     </div>
     </BrowserRouter>
     </>

@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import iconos from '../iconos';
 
 export const ItemDetailContainer = ()=> {
-  
- const {id} = useParams();
+// TODO SE ENCARGA DE TOMAR LA INFORMACION SEGUN EL ID QUE RETORNA USEPARAMS Y RE-RENDERIZA PARA QUE EL BOTON PUEDA FUNCIONAR 
+  const {id} = useParams();
   const db = getFirestore();
   const [datas, setdatas] = useState({});
 
@@ -18,18 +18,11 @@ export const ItemDetailContainer = ()=> {
   GetItemData()
 }, [datas])
   
-
-  const Favourite=()=>{SetFavoutitesButton(false)}
-  const NonFavourites=()=>{SetFavoutitesButton(true)}
-
-// TODO Start of All methodes to get data
-
-
+//todo
 
 const [FavouritesButton, SetFavoutitesButton]=useState(!datas.deseado);
-
-//TODO End of All methodes to get data.
-
+const Favourite=()=>{SetFavoutitesButton(false)}
+const NonFavourites=()=>{SetFavoutitesButton(true)}
 
 //* SE ENCARGAN DE AÑADIR EL BOOLEANO DEL CARRITO DEL ID DE LA COLECCION ITEM.
 

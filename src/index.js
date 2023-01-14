@@ -14,12 +14,12 @@ import { initializeApp } from "firebase/app";
   appId: "1:423442116689:web:5c809bdd7f213247ac8870"
 };*/
 const firebaseConfig = {
-  apiKey: "AIzaSyC8SFyvP26osMKoldrAGP3XhGism9cQaKU",
-  authDomain: "react-facu-mar.firebaseapp.com",
-  projectId: "react-facu-mar",
-  storageBucket: "react-facu-mar.appspot.com",
-  messagingSenderId: "14011489321",
-  appId: "1:14011489321:web:5024c977ca80d3ce89d038"
+  apiKey: "AIzaSyB_1Swt0xSJ80zoqlfgWt_MjhBeheF4tcY",
+  authDomain: "react-facu-final.firebaseapp.com",
+  projectId: "react-facu-final",
+  storageBucket: "react-facu-final.appspot.com",
+  messagingSenderId: "569484485328",
+  appId: "1:569484485328:web:dd525ab0c13850ccf334d5"
 };
 
 

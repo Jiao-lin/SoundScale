@@ -5,22 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 
-/*const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyAqFtos0a86NSd5i_OUQuBoD4xQvMypT4A",
   authDomain: "react-58861.firebaseapp.com",
   projectId: "react-58861",
   storageBucket: "react-58861.appspot.com",
   messagingSenderId: "423442116689",
   appId: "1:423442116689:web:5c809bdd7f213247ac8870"
-};*/
-const firebaseConfig = {
+};
+/*const firebaseConfig = {
   apiKey: "AIzaSyB_1Swt0xSJ80zoqlfgWt_MjhBeheF4tcY",
   authDomain: "react-facu-final.firebaseapp.com",
   projectId: "react-facu-final",
   storageBucket: "react-facu-final.appspot.com",
   messagingSenderId: "569484485328",
   appId: "1:569484485328:web:dd525ab0c13850ccf334d5"
-};
+};*/
 
 
 initializeApp(firebaseConfig);

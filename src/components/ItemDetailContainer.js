@@ -8,15 +8,15 @@ export const ItemDetailContainer = ()=> {
   const {id} = useParams();
   const db = getFirestore();
   const [datas, setdatas] = useState({});
+  const [Render,setRender]=useState();
 
   useEffect(() => {
     const db = getFirestore();
     const GetItemData = async()=>{
       const docsRef = doc(db,'item',id);
-      await getDoc(docsRef).then((d)=>setdatas({id:d.id, ...d.data()}));
-       }
+      await getDoc(docsRef).then((d)=>setdatas({id:d.id,vt:true, ...d.data()}));}  
   GetItemData()
-}, [datas])
+}, [Render])
   
 //todo
 
@@ -55,7 +55,7 @@ const RemoveToCartList = async()=>{
 }
 //!.
 
-  return (
+return (
     <main className='h-screen bg-neutral-900 flex items-center justify-center'>
       <div className='w-2/4 h-2/5 flex rounded-sm border border-zinc-700 mb-32'>
         <img src={datas.img} alt="idk" className='h-full w-[40%] object-cover'/>
@@ -67,12 +67,13 @@ const RemoveToCartList = async()=>{
         {FavouritesButton ? <button onClick={Favourite} className=' w-10 flex justify-center items-center rounded-lg hover:shadow-[0px_0px_7px_1px] shadow-pink-400/60 text-pink-500 border border-pink-500'>{iconos.corazon}</button> : <button onClick={NonFavourites} className=' w-10 flex justify-center items-center rounded-lg shadow-[0px_0px_7px_1px] shadow-pink-400/60 bg-pink-500 border border-pink-500 text-zinc-900'>{iconos.corazonLleno}</button>}
         {datas.carrito
         ? 
-        <button onClick={()=>{AddUpdate(); AddToCartList();}}  className="group w-2/3 p-1 mx-1 font-sans subpixel-antialiased flex items-center justify-center rounded-lg bg-green-500 shadow-[0px_0px_7px_1px] shadow-green-400/60 text-white">{iconos.carrito}+${datas.precio}</button> 
+        <button onClick={()=>{AddUpdate(); AddToCartList(); setRender(false)}}  className="group w-2/3 p-1 mx-1 font-sans subpixel-antialiased flex items-center justify-center rounded-lg bg-green-500 shadow-[0px_0px_7px_1px] shadow-green-400/60 text-white">{iconos.carrito}+${datas.precio}</button> 
         : 
-        <button onClick={()=>{LessUpdate(); RemoveToCartList();}}  className="group w-2/3 p-1 mx-1 font-sans subpixel-antialiased flex items-center justify-center rounded-lg bg-red-500 shadow-[0px_0px_7px_1px] shadow-red-400/60 text-white">{iconos.carrito}-${datas.precio}</button>}
+        <button onClick={()=>{LessUpdate(); RemoveToCartList(); setRender(true)}}  className="group w-2/3 p-1 mx-1 font-sans subpixel-antialiased flex items-center justify-center rounded-lg bg-red-500 shadow-[0px_0px_7px_1px] shadow-red-400/60 text-white">{iconos.carrito}-${datas.precio}</button>}
         </div>
       </div>
       </div>
     </main>
   )
 }
+

@@ -44,7 +44,7 @@ const MusicCard = ({artists,id,img,title,carrito,deseado,song,precio,estilo})=>{
 
     return(
         <div key={id} className="h-16 w-2/3 gap-2 items-center flex justify-between text-slate-300 bg-zinc-800 rounded-md">
-        <img src={img} alt='imagen' className='h-full object-cover'/>
+        <img src={img} alt='imagen' className='h-full w-[64px] object-cover'/>
         <h1>{title}<p> - {artists}</p></h1>
         <audio controls src={song}/>
         <div className='flex justify-center items-center gap-x-4 h-full'>
